@@ -1,10 +1,11 @@
 import React from 'react'
 import audi from '../images/audi.jpg'
 import toyota from '../images/toyota.jpg'
-
+import ford from '../images/ford.jpg'
+import bar from '../images/bar.jpg'
 function Carusel() {
     return (
-        <div id="carouselExampleCaptions" class="carousel slide container" data-bs-ride="carousel" >
+        <div id="carouselExampleCaptions" class="carousel slide position-absolute" data-bs-ride="carousel" style={{position: 'absolute', top: 0, width: '100%'}}>
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -12,14 +13,14 @@ function Carusel() {
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active" data-bs-interval="3000">
-                    <img src={audi} class="d-block w-100" alt="..." style={{ height: 600 }} />
+                    <img src={bar} class="d-block w-100" alt="..." style={{ height: '100vh' }} />
                     <div class="carousel-caption d-none d-md-block">
                         <h5>First slide label</h5>
                         <p>Some representative placeholder content for the first slide.</p>
                     </div>
                 </div>
                 <div class="carousel-item" data-bs-interval="3000">
-                    <img src={toyota} class="d-block w-100" alt="..." style={{ height: 600 }} />
+                    <img src={toyota} class="d-block w-100" alt="..." style={{ height: '100vh' }} />
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Second slide label</h5>
                         <p>Some representative placeholder content for the second slide.</p>
