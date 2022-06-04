@@ -18,7 +18,7 @@ function Footer() {
             <a href="https://t.me/agromash_elit" className="me-4 text-reset" target={'_blank'}>
               <FaTelegramPlane />
             </a>
-            <a href="https://www.youtube.com/channel/UC2kMDrHwJAKarYCeV9gE_wA" target="_blank" className="me-4 text-reset" target={'_blank'}>
+            <a href="https://www.youtube.com/channel/UC2kMDrHwJAKarYCeV9gE_wA" className="me-4 text-reset" target={'_blank'}>
               <FaYoutube />
             </a>
             <a href="https://instagram.com/agromashelit" className="me-4 text-reset" target={'_blank'}>
