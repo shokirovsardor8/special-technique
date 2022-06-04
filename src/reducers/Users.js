@@ -121,32 +121,6 @@ export const edituser = (data) => apiCall({
     error: slice.actions.adduserReducer.type
 })
 
-
-export const getAllUser = (data) => apiCall({
-    url: "/out/api/user/getAll/" + data,
-    method: "get",
-    headers: {
-        Authorization: getToken(),
-        role: getRole(),
-        id: getId(),
-    },
-
-    success: slice.actions.getuserReducer.type,
-    error: slice.actions.getuserReducer.type
-})
-
-export const getAllUser2 = () => apiCall({
-    url: "/out/api/user/getAll",
-    method: "get",
-    headers: {
-        Authorization: getToken(),
-        role: getRole(),
-        id: getId(),
-    },
-    success: slice.actions.getuserReducer.type,
-    error: slice.actions.getuserReducer.type
-})
-
 export const passwordReset = (id) => apiCall({
     url: "/out/api/user/resetPassword/" + id,
     method: "put",
@@ -160,7 +134,7 @@ export const passwordReset = (id) => apiCall({
 })
 
 export const signIn = (data) => apiCall({
-    url: "/out/api/user/signIn",
+    url: "/api/user/signIn",
     method: "post",
     data,
     success: slice.actions.signInuserReducer.type,

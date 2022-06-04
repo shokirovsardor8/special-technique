@@ -1,49 +1,74 @@
 import React from 'react'
-import audi from '../images/audi.jpg'
-import toyota from '../images/toyota.jpg'
-import ford from '../images/ford.jpg'
-import bar from '../images/bar.jpg'
+import traktor from '../images/traktor.png'
+import fasd from '../images/fasd.png'
+import dwd from '../images/dwd.png'
+import press from '../images/press.png'
+import { Carousel } from 'react-bootstrap'
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper";
+
+import "swiper/css";
+import "swiper/css/navigation";
+
 function Carusel() {
     return (
-        <div id="carouselExampleCaptions" class="carousel slide position-absolute" data-bs-ride="carousel" style={{position: 'absolute', top: 0, width: '100%'}}>
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                {/* <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button> */}
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="3000">
-                    <img src={bar} class="d-block w-100" alt="..." style={{ height: '100vh' }} />
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>First slide label</h5>
-                        <p>Some representative placeholder content for the first slide.</p>
+        <div className='container pt-5 pb-5'>
+            <Carousel>
+                <Carousel.Item className='home-carousel' interval={5000}>
+                    <div className='home-img'>
+                        <img
+                            className="d-none d-md-block w-50 float-end mt-5 mb-0"
+                            src={traktor}
+                            alt="First slide"
+                        />
                     </div>
-                </div>
-                <div class="carousel-item" data-bs-interval="3000">
-                    <img src={toyota} class="d-block w-100" alt="..." style={{ height: '100vh' }} />
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Second slide label</h5>
-                        <p>Some representative placeholder content for the second slide.</p>
+                    <div className='slider-text m-5 m-md-5 w-75'>
+                        <h1 className='fw-bold text-white'>DEUTZ-FAHR <br/>Germaniya </h1>
+                        <p className='text-white'></p>
+                        {/* <div className='mt-5 mb-5 tel-btn'> */}
+                        <a href='tel:+998904708181' className='tel-btn btn-lg btn-success home-call-btn mb-5'>Qo'ng'iroq qilish</a>
+                        {/* </div> */}
                     </div>
-                </div>
-                {/* <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="..."/>
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Third slide label</h5>
-                        <p>Some representative placeholder content for the third slide.</p>
+                </Carousel.Item>
+                <Carousel.Item className='home-carousel' interval={5000}>
+                    <img
+                        className="d-none d-md-block w-50 float-end home-img"
+                        src={fasd}
+                        alt="First slide"
+                        style={{marginTop: '150px'}}
+                    />
+                    <div className='slider-text m-5 w-75'>
+                    <h1 className='fw-bold text-white'>Somon zichlagich Z-511 <br/>Polsha</h1>
+                        <a href='tel:+998904708181' className='tel-btn btn-lg btn-success home-call-btn mb-5'>Qo'ng'iroq qilish</a>
                     </div>
-                </div> */}
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+                </Carousel.Item>
+                <Carousel.Item className='home-carousel2' interval={5000}>
+                    <img
+                        className="d-none d-md-block w-50 float-end mb-5 home-img"
+                        src={dwd}
+                        alt="First slide"
+                        style={{marginTop: '180px'}}
+                    />
+                    <div className='slider-text m-5 w-75'>
+                        <h1 className='fw-bold text-white'>Pnevmatik ekish mashinasi<br/>Turkiya</h1>
+                        <a href='tel:+998904708181' className='tel-btn btn-lg btn-success home-call-btn mb-5'>Qo'ng'iroq qilish</a>
+                    </div>
+                </Carousel.Item>
+                <Carousel.Item className='home-carousel' interval={5000}>
+                    <img
+                        className="d-none d-md-block w-50 float-end home-img"
+                        src={press}
+                        alt="First slide"
+                        style={{marginTop: '235px'}}
+                    />
+                    <div className='slider-text m-5 w-75'>
+                    <h1 className='fw-bold text-white'>Somon zichlagich BLY-02R <br/>Turkiya</h1>
+                        <a href='tel:+998904708181' className='tel-btn btn-lg btn-success home-call-btn mb-5'>Qo'ng'iroq qilish</a>
+                    </div>
+                </Carousel.Item>
+            </Carousel>
         </div>
-
     )
 }
 
