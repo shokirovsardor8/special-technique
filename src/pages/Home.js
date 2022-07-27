@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { Container, Button, Card} from 'react-bootstrap';
+import { Container, Button, Card } from 'react-bootstrap';
 import Carusel from './Carusel';
-import { } from 'react-bootstrap'
 import { AiOutlineArrowRight, AiOutlineSearch } from 'react-icons/ai'
 import { Link, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
@@ -41,7 +40,7 @@ function Home(props) {
 
       <div>
         <Container>
-          {Array?.isArray(productView)&& productView?.map((item, index) => (
+          {Array?.isArray(productView) && productView?.map((item, index) => (
             item?.limitProducts.length > 3 ?
               <div key={index}>
                 <div className="d-flex justify-content-between">
@@ -56,7 +55,7 @@ function Home(props) {
                       <Link to={'/product/' + item1?.id}>
                         <Card className='p-2 mt-1 mb-4 card-product'>
                           <div className='position-relative'>
-                            <div style={{ backgroundImage: 'url("data:image/png;base64,' + item1.listBytes + '")', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover' }}
+                            <div style={{ backgroundImage: `url(https://www.agromashelit.uz/agromash/api/attachment/downloadSytem/${item1?.id})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover' }}
                               className='card-image'
                             >
 

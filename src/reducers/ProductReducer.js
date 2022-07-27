@@ -43,11 +43,11 @@ function getId() {
 export const getproduct = (id) => apiCall({
     url: "/api/product/get-one/" + id,
     method: "get",
-    headers: {
-        Authorization: getToken(),
-        role: getRole(),
-        id: getId(),
-    },
+    // headers: {
+    //     Authorization: getToken(),
+    //     role: getRole(),
+    //     id: getId(),
+    // },
     success: slice.actions.getproductReducer.type,
     error: slice.actions.getErrorproductReducer.type
 })
@@ -55,11 +55,11 @@ export const getproduct = (id) => apiCall({
 export const getproductview = () => apiCall({
     url: "/api/product/get-view",
     method: "get",
-    headers: {
-        Authorization: getToken(),
-        role: getRole(),
-        id: getId(),
-    },
+    // headers: {
+    //     Authorization: getToken(),
+    //     role: getRole(),
+    //     id: getId(),
+    // },
     success: slice.actions.getproductReducer.type,
     error: slice.actions.getErrorproductReducer.type
 })
@@ -67,11 +67,11 @@ export const getproductview = () => apiCall({
 export const getproductsearch = (params) => apiCall({
     url: "/api/product/search",
     method: "get",
-    headers: {
-        Authorization: getToken(),
-        role: getRole(),
-        id: getId(),
-    },
+    // headers: {
+    //     Authorization: getToken(),
+    //     role: getRole(),
+    //     id: getId(),
+    // },
     params,
     success: slice.actions.getproductReducer.type,
     error: slice.actions.getErrorproductReducer.type
@@ -80,11 +80,11 @@ export const getproductsearch = (params) => apiCall({
 export const getproductList = (categoryId, params) => apiCall({
     url: "/api/product/get-page-product/" + categoryId,
     method: "get",
-    headers: {
-        Authorization: getToken(),
-        role: getRole(),
-        id: getId(),
-    },
+    // headers: {
+    //     Authorization: getToken(),
+    //     role: getRole(),
+    //     id: getId(),
+    // },
     params,
     success: slice.actions.getproductReducer.type,
     error: slice.actions.getErrorproductReducer.type

@@ -40,6 +40,7 @@ function ProductInfo() {
 
     useEffect(() => {
         setProduct(selector?.product)
+
     }, [selector?.product])
 
     useEffect(() => {
@@ -118,7 +119,7 @@ function ProductInfo() {
         var imagedata = document.getElementById('image').files[0];
         data.append("file", imagedata);
 
-        const res = await axios.post("http://185.217.131.138:8083/api/attachment/uploadSystem/" + product.id + "/"+e.target.isMain.value, data, {
+        const res = await axios.post("https://www.agromashelit.uz/api/attachment/uploadSystem/" + product.id + "/" + e.target.isMain.value, data, {
             headers: {
                 "Content-Type": "multipart/form-data",
                 Authorization: localStorage.getItem('Authorization'),
@@ -146,7 +147,7 @@ function ProductInfo() {
         //     toast.success(useSelector(state => state.product.result.message));
         //     dispatch(getproduct(pathname.substring(pathname.lastIndexOf('/') + 1)));
         // }
-        const res = await axios.delete("http://185.217.131.138:8083/api/attachment/delete/" + id,{
+        const res = await axios.delete("https://www.agromashelit.uz/api/attachment/delete/" + id, {
             headers: {
                 Authorization: localStorage.getItem('Authorization'),
                 role: localStorage.getItem('role'),
@@ -161,7 +162,7 @@ function ProductInfo() {
     }
 
     const deleteProduct = async () => {
-        const res = await axios.delete("http://185.217.131.138:8083/api/product/delete/" + product.id,{
+        const res = await axios.delete("https://www.agromashelit.uz/api/product/delete/" + product.id, {
             headers: {
                 Authorization: localStorage.getItem('Authorization'),
                 role: localStorage.getItem('role'),
@@ -189,7 +190,7 @@ function ProductInfo() {
                             <label className="form-label">Rasm tanlang</label>
                         </div>
                         <div classname="form-outline mb-4">
-                            <input type={'checkbox'} className="form-check-input me-1" name='isMain' id='checkk'/>
+                            <input type={'checkbox'} className="form-check-input me-1" name='isMain' id='checkk' />
                             <label className="form-label" htmlFor='checkk'>Asosiy qilib belgilash</label>
                         </div>
                     </form>
@@ -304,7 +305,7 @@ function ProductInfo() {
 
                                             <img
                                                 className="d-block img"
-                                                src={"data:image/png;base64," + item?.bytes}
+                                                src={"https://www.agromashelit.uz/agromash/api/attachment/downloadSytem/" + item?.id}
                                                 alt="First slide"
                                             />
                                             {localStorage.getItem('role') === 'ADMIN' && (
@@ -355,7 +356,7 @@ function ProductInfo() {
                                     <h4 className=''>tavsif</h4>
                                     <p className=''>{product?.description}</p>
                                     {product?.link !== "" &&
-                                    <p className='mb-4'> <a href={product?.link} target={'_blank'} style={{color: '#FF0000'}}>Batafsil video...</a></p>
+                                        <p className='mb-4'> <a href={product?.link} target={'_blank'} style={{ color: '#FF0000' }}>Batafsil video...</a></p>
                                     }
                                     {localStorage.getItem('role') === 'ADMIN' ?
                                         <>

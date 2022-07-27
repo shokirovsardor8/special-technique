@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { apiCall } from "../api/ApiCall/ApiCall";
 
-let initialState={
+let initialState = {
     category: [],
     result: {},
     error: {},
@@ -49,11 +49,11 @@ export function clearCategory() {
 export const getAllCategory = () => apiCall({
     url: "/api/category/get-all",
     method: "get",
-    headers: {
-        Authorization: getToken(),
-        role: getRole(),
-        id: getId(),
-    },
+    // headers: {
+    //     Authorization: getToken(),
+    //     role: getRole(),
+    //     id: getId(),
+    // },
     success: slice.actions.getCategoryReducer.type,
     error: slice.actions.getErrorCategoryReducer.type
 })

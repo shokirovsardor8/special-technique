@@ -27,6 +27,7 @@ function MyNavbar() {
 
   useEffect(() => {
     setCategory(selector?.category)
+    console.log(selector, 'selector');
   }, [selector?.category])
 
 
@@ -60,12 +61,12 @@ function MyNavbar() {
         <div className="container position-relative" >
           <div className='mb-4 mt-4 me-4' style={{ marginTop: '20px' }}>
             <Link className="navbar-brand h1 fw-bold me-0 text-success text-uppercase" to='/' style={{ fontSize: 30 }}>
-              
-              <img src={logo} width={280} style={{height: 'auto', weight: '40px'}}/>
-              
-              </Link>
+
+              <img src={logo} width={280} style={{ height: 'auto', weight: '40px' }} />
+
+            </Link>
             {localStorage.getItem("role") !== "ADMIN" ?
-              <Link to ='/about' className='me-4 ms-5 text-decoration-underline text-muted d-none d-sm-inline-block'>Biz haqimizda</Link>
+              <Link to='/about' className='me-4 ms-5 text-decoration-underline text-muted d-none d-sm-inline-block'>Biz haqimizda</Link>
               : null}
           </div>
           <div className='mb-3 mt-3'>
@@ -109,7 +110,7 @@ function MyNavbar() {
 
           }
           {/* <h1 className=''><AiFillInstagram/></h1> */}
-         
+
 
 
         </div>
@@ -158,7 +159,7 @@ function MyNavbar() {
             navigation={true}
             modules={[Navigation]}>
 
-            {Array.isArray(category)&& category?.map((item, index) =>
+            {Array.isArray(category) && category?.map((item, index) =>
               <SwiperSlide className='nav-item w-auto' key={index}>
                 <Link to={"/" + item?.id} className="nav-link text-black">{item.name}</Link>
               </SwiperSlide>

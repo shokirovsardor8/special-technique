@@ -13,8 +13,8 @@ import './index.css';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={Store}>
-    <BrowserRouter>
-    <App />
+    <BrowserRouter >
+      <App />
     </BrowserRouter>
   </Provider>
 );

@@ -22,6 +22,7 @@
     "swiper": "^8.1.5",
     "web-vitals": "^2.1.4"
   },
+  "homepage": "http://185.217.131.138",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
