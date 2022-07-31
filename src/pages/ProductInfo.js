@@ -119,7 +119,7 @@ function ProductInfo() {
         var imagedata = document.getElementById('image').files[0];
         data.append("file", imagedata);
 
-        const res = await axios.post("https://www.agromashelit.uz/api/attachment/uploadSystem/" + product.id + "/" + e.target.isMain.value, data, {
+        const res = await axios.post("https://agromashelit.uz/agromash/api/attachment/uploadSystem/" + product.id + "/" + e.target.isMain.value, data, {
             headers: {
                 "Content-Type": "multipart/form-data",
                 Authorization: localStorage.getItem('Authorization'),
@@ -147,7 +147,7 @@ function ProductInfo() {
         //     toast.success(useSelector(state => state.product.result.message));
         //     dispatch(getproduct(pathname.substring(pathname.lastIndexOf('/') + 1)));
         // }
-        const res = await axios.delete("https://www.agromashelit.uz/api/attachment/delete/" + id, {
+        const res = await axios.delete("https://agromashelit.uz/agromash/api/attachment/delete/" + id, {
             headers: {
                 Authorization: localStorage.getItem('Authorization'),
                 role: localStorage.getItem('role'),
@@ -162,7 +162,7 @@ function ProductInfo() {
     }
 
     const deleteProduct = async () => {
-        const res = await axios.delete("http://185.217.131.138:7788/agromash/api/product/delete/" + product.id, {
+        const res = await axios.delete("https://agromashelit.uz/agromash/api/product/delete/" + product.id, {
             headers: {
                 Authorization: localStorage.getItem('Authorization'),
                 role: localStorage.getItem('role'),
@@ -305,7 +305,7 @@ function ProductInfo() {
 
                                             <img
                                                 className="d-block img"
-                                                src={"http://185.217.131.138:7788/agromash/api/attachment/downloadSytem/" + item?.id}
+                                                src={"https://agromashelit.uz/agromash/api/attachment/downloadSytem/" + item?.id}
                                                 alt="First slide"
                                             />
                                             {localStorage.getItem('role') === 'ADMIN' && (

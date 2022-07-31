@@ -210,7 +210,7 @@ function ProductList(props) {
                                 <Link to={'/product/' + item1?.id}>
                                     <Card className='p-2 mt-1 mb-4 card-product border-1'>
                                         <div className='position-relative'>
-                                            <div style={{ backgroundImage: `url(http://185.217.131.138:7788/agromash/api/attachment/downloadSytem/${item1?.id})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover' }}
+                                            <div style={{ backgroundImage: `url(https://agromashelit.uz/agromash/api/attachment/downloadSytem/${item1?.id})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center', backgroundSize: 'cover' }}
                                                 className='card-image'
                                             >
 
