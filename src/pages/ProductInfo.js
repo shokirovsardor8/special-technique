@@ -162,7 +162,7 @@ function ProductInfo() {
     }
 
     const deleteProduct = async () => {
-        const res = await axios.delete("https://www.agromashelit.uz/api/product/delete/" + product.id, {
+        const res = await axios.delete("http://185.217.131.138:7788/agromash/api/product/delete/" + product.id, {
             headers: {
                 Authorization: localStorage.getItem('Authorization'),
                 role: localStorage.getItem('role'),
@@ -305,7 +305,7 @@ function ProductInfo() {
 
                                             <img
                                                 className="d-block img"
-                                                src={"https://www.agromashelit.uz/agromash/api/attachment/downloadSytem/" + item?.id}
+                                                src={"http://185.217.131.138:7788/agromash/api/attachment/downloadSytem/" + item?.id}
                                                 alt="First slide"
                                             />
                                             {localStorage.getItem('role') === 'ADMIN' && (

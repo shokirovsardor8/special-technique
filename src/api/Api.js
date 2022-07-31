@@ -15,10 +15,10 @@ const api = ({ dispatch }) => (next) => (action) => {
 
     axios({
         // baseURL: "http://192.168.100.32:8083",
-        baseURL: "https://www.agromashelit.uz/agromash",
+        // baseURL: "https://www.agromashelit.uz/agromash",
         // baseURL: "http://192.168.43.168:8083",
         // baseURL: "http://185.217.131.138:8083",
-        // baseURL: "http://185.217.131.138:8083",
+        baseURL: "http://185.217.131.138:7788/agromash",
         url,
         method,
         data,
